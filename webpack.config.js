@@ -5,7 +5,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   entry: './public/index.js',
   output: {
-    filename: './public/public/bundle.js'
+    filename: './public/js/bundle.js'
   },
   module: {
     loaders: [
@@ -20,13 +20,12 @@ module.exports = {
       // {
       //   test: /\.sass$/,
       //   loader: ExtractTextPlugin.extract('css!sass')
-      // }
-      // sass entry files apperently need semicolons according to sass-loader errors
+      // } // sass entry files apperently need semicolons according to sass-loader errors
     ]
   },
   plugins: [
     // new LiveReloadPlugin(options),
-    new ExtractTextPlugin('./public/public/bundle.css', {
+    new ExtractTextPlugin('./public/css/bundle.css', {
         allChunks: true
     }),
     //new webpack.optimize.UglifyJsPlugin({minimize: true}), // uncomment when ready to minify
